@@ -16,7 +16,7 @@ export class CustomersController {
   @Get()
   @ResponseMessage('Users fetched successfully')
   getCustomers(@Body() body: CustomerDto) {
-    throw new HttpException('Custom error message', 400);
+    throw new HttpException('', 400);
     throw new InternalServerErrorException('Internal server error');
     throw new UnauthorizedException('Unauthorized access');
     throw new BadRequestException('Invalid request body');
