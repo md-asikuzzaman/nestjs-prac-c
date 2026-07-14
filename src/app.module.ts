@@ -4,12 +4,16 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
 import { CustomersModule } from './customers/customers.module';
+import { BrandsModule } from './brands/brands.module';
+import { ProductsModule } from './products/products.module';
 
 @Module({
   imports: [
     CustomersModule,
     ConfigModule.forRoot({ isGlobal: true, envFilePath: '.env', cache: true }),
     AuthModule,
+    BrandsModule,
+    ProductsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
